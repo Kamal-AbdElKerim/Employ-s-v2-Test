@@ -1,0 +1,202 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Employee List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div class="contianer">
+      <div class="signupSection">
+        <form action="#" method="POST" class="signupForm" name="signupform">
+          <h2>Ajouter un nouvel employé</h2>
+          <ul class="noBullet">
+            <li>
+              <label for="username"></label>
+              <input
+                type="text"
+                class="inputFields"
+                id="username"
+                name="username"
+                placeholder="Username"
+                value=""
+              />
+            </li>
+
+            <li>
+              <label for="email"></label>
+              <input
+                type="email"
+                class="inputFields"
+                id="email"
+                name="email"
+                placeholder="Email"
+                value=""
+              />
+            </li>
+            <li>
+              <label for="phone"></label>
+              <input
+                type="tel"
+                class="inputFields"
+                id="phone"
+                name="phone"
+                placeholder="Numéro de téléphone"
+              />
+            </li>
+            <li>
+              <label for="department"></label>
+              <select id="department" name="department">
+                <option value="">Sélectionnez un Département</option>
+                <option value="HR">Ressources Humaines</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Sales">Ventes</option>
+              </select>
+              <label for="position"></label>
+              <select id="position" name="position">
+                <option value="">Sélectionnez un poste</option>
+                <option value="Developer">Développeur</option>
+                <option value="Manager">Manager</option>
+                <option value="HR Specialist">Spécialiste RH</option>
+                <option value="Marketing Specialist">
+                  Spécialiste Marketing
+                </option>
+                <option value="Sales Representative">
+                  Représentant Commercial
+                </option>
+              </select>
+            </li>
+            <li id="center-btn">
+              <button type="button">
+                <div class="svg-wrapper-1">
+                  <div class="svg-wrapper">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        fill="currentColor"
+                        d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <span>Ajouter</span>
+              </button>
+            </li>
+          </ul>
+        </form>
+      </div>
+      <div class="list">
+        <!-- one user  -->
+        <div class="OnePost">
+          <div class="img">
+            <img src="assets/image/images.png" alt="" />
+          </div>
+          <div class="profile">
+            <h3>islam</h3>
+            <p>islam@gmail.com</p>
+          </div>
+          <div class="moreinfo">
+            <!-- HTML !-->
+            <button class="button-33" role="button" type="button" id="myBtn">
+              <i class="fa-regular fa-circle-question"></i>
+            </button>
+            <button
+              class="button-33 bg_denger"
+              role="button"
+              type="button"
+              id="myBtn"
+            >
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+        <!-- one user  -->
+        <!-- one user  -->
+        <div class="OnePost">
+          <div class="img">
+            <img src="assets/image/images.png" alt="" />
+          </div>
+          <div class="profile">
+            <h3>islam</h3>
+            <p>islam@gmail.com</p>
+          </div>
+          <div class="moreinfo">
+            <!-- HTML !-->
+            <button class="button-33" role="button" type="button" id="myBtn">
+              <i class="fa-regular fa-circle-question"></i>
+            </button>
+            <button
+              class="button-33 bg_denger"
+              role="button"
+              type="button"
+              id="myBtn"
+            >
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+        <!-- one user  -->
+      </div>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="cookie-card">
+            <span class="title">🍪 islam</span>
+            <span class="close">&times;</span>
+            <p class="description">Email : islam@gmail.com</p>
+            <p class="description">Département : Département 1</p>
+            <p class="description">Poste : Poste 1</p>
+            <div class="actions">
+              <button disabled class="accept">
+                0669474622
+                <span> <i class="fa-solid fa-phone-volume"></i></span>
+              </button>
+              <button class="accept bg-green">
+                <i class="fa-regular fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+  <script
+    src="https://kit.fontawesome.com/e9ea9ee727.js"
+    crossorigin="anonymous"
+  ></script>
+</html>

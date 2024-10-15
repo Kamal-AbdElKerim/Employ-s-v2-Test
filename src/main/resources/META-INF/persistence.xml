@@ -1,0 +1,32 @@
+
+
+
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+<persistence-unit name="MaPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <class>model.Auth.User</class>
+    <class>model.Auth.Employee</class>
+    <class>model.Auth.Admin</class>
+    <class>model.Auth.RH</class>
+    <class>model.Candidature</class>
+    <class>model.Notification</class>
+    <class>model.Conge</class>
+    <class>model.Rapport</class>
+    <class>model.EmployeFamiliale</class>
+    <class>model.OffreEmploi</class>
+    <properties>
+        <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+        <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/employe_version_2"/>
+        <property name="javax.persistence.jdbc.user" value="postgres"/>
+        <property name="javax.persistence.jdbc.password" value="0"/>
+
+        <!-- Specify dialect -->
+        <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+        <property name="hibernate.hbm2ddl.auto" value="update"/>
+        <property name="format_sql" value="true"/>
+    </properties>
+</persistence-unit>
+</persistence>
