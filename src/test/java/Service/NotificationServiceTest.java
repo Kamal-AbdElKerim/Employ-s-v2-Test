@@ -35,26 +35,26 @@ class NotificationServiceTest {
 
     @Test
     void testCreateNotification() {
-        // Arrange
+       
         when(notificationRepo.createNotification(notification)).thenReturn(notification);
 
-        // Act
+        
         Notification createdNotification = notificationService.createNotification(notification);
 
-        // Assert
+        
         assertEquals(notification, createdNotification);
         verify(notificationRepo, times(1)).createNotification(notification);
     }
 
     @Test
     void testFindAllNotifications() {
-        // Arrange
+       
         when(notificationRepo.findAllNotifications()).thenReturn(Collections.singletonList(notification));
 
-        // Act
+        
         List<Notification> notifications = notificationService.findAllNotifications();
 
-        // Assert
+        
         assertEquals(1, notifications.size());
         assertEquals(notification, notifications.get(0));
     }
