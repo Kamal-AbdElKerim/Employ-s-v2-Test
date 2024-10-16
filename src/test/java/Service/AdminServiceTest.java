@@ -25,31 +25,31 @@ public class AdminServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    // Test for findAdminByEmail()
+    
     @Test
     public void testFindAdminByEmail_Found() {
-        // Arrange
+        
         Admin admin = new Admin();
         admin.setEmail("admin@example.com");
         when(adminRepo.findAdminByEmail("admin@example.com")).thenReturn(admin);
 
-        // Act
+        
         Admin result = adminService.findAdminByEmail("admin@example.com");
 
-        // Assert
+        
         assertEquals(admin, result);
         verify(adminRepo, times(1)).findAdminByEmail("admin@example.com");
     }
 
     @Test
     public void testFindAdminByEmail_NotFound() {
-        // Arrange
+        
         when(adminRepo.findAdminByEmail("admin@example.com")).thenReturn(null);
 
-        // Act
+        
         Admin result = adminService.findAdminByEmail("admin@example.com");
 
-        // Assert
+        
         assertNull(result);
         verify(adminRepo, times(1)).findAdminByEmail("admin@example.com");
     }
