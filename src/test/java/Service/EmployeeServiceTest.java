@@ -76,6 +76,7 @@ class EmployeeServiceTest {
 
         
         assertEquals(1, employees.size());
+        
         assertEquals(employee, employees.get(0));
     }
 
